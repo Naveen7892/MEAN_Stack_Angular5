@@ -1,0 +1,32 @@
+-----------------------1-------------------------------------
+When using curl to insert data to mongoDB through Express API
+
+(Working)
+curl -i -H "Accept: application/json" localhost:3000/book
+
+(Not working)
+curl -i -X POST -H "Content-Type: application/json" -d '{ "isbn":"123442123, 97885654453443","title":"Learn how to build modern web application with MEAN stack","author": "Didin J.","description":"The comprehensive step by step tutorial on how to build MEAN (MongoDB, Express.js, Angular 5 and Node.js) stack web application from scratch","published_year":"2017","publisher":"Djamware.com" }' localhost:3000/book
+
+Error:
+No default engine was specified and no extension was provided
+
+SOL:
+in app.js, add:
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs');
+
+or 
+
+Use postman tool to make request
+-----------------------2--------------------------------------
+After adding view engine to avoid error 1
+
+Error: Failed to lookup view "error" in views directory
+
+SOL:
+Add error.ejs file in view\
+
+or 
+
+Use postman tool to make request
+--------------------------------------------------------------

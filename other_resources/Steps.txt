@@ -1,0 +1,91 @@
+https://www.djamware.com/post/5a0673c880aca7739224ee21/mean-stack-angular-5-crud-web-application-example
+
+referece links:
+http://mongoosejs.com/docs/schematypes.html
+
+>> node -v 
+8.9.2
+
+>> npm -v
+5.5.1
+
+>> npm list -g --depth=0
++-- @angular/cli@1.6.1
++-- express-generator@4.15.5
++-- http-server@0.11.0
++-- npm@5.5.1
+`-- npm-check-updates@2.14.0
+
+-------------------------------------------------
+Update angular cli
+>> npm install -g @angular/cli
++ @angular/cli@1.7.1
+
+Create new project
+>> ng new mean-angular5
+
+>> cd mean-angular5
+
+>> npm install
+
+>> ng serve
+
+------------------------------------------------
+>> npm install --save express body-parser morgan body-parser serve-favicon
+
+>> md bin
+
+>> copy con bin\www
+[press ctrl+z]
+
+[copy content from tutorial]
+
+In package.json, replace "start": "ng serve" to
+"start": "ng build && node ./bin/www",
+
+root>> copy con app.js
+[press ctrl+z]
+
+>> md routes
+
+>> copy con routes\book.js
+[press ctrl+z]
+
+>> npm start
+
+------------------------------------------------
+>> npm install --save mongoose bluebird
+
+other folder>> mongod --dbpath=data
+
+[copy code to app.js]
+
+To check if mongodb connection works.
+>> npm start
+...
+Connection successful
+
+>> md models
+
+>> copy con models\Book.js
+[Press ctrl+z]
+
+[Copy code to models\Book.js]
+
+[Copy code to routes\book.js]
+
+##########To Avoid Error - 1 (Error.txt)####################
+>> npm install ejs --save
+
+>> npm install --save-dev nodemon
+[In package.json, replace]
+"start": "ng build && node ./bin/www" to
+"start": "ng build && nodemon ./bin/www",
+
+In app.js, add:
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs');
+#############################################
+
+
+
