@@ -87,3 +87,19 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 #############################################
 
+--------------------------------------------------------------------
+>> ng g component book
+
+[Code changes in app.moduel.ts, app\book.component.*, index.html]
+
+>> ng g component book-detail
+
+[Code changes in app.module.ts, app\book-detail.component.*]
+
+>> ng g component book-create
+
+[Code changes in app.module.ts, app\book.component.ts, app\book-create.component.*]
+
+>> ng g component book-edit
+
+
